@@ -1,0 +1,88 @@
+<html lang="es">
+    <head>
+        <!-- Metadatos -->
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        <!-- Estilos de la página -->
+        <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="assets/css/styles.css" />
+
+        <!-- Título -->
+        <title>Calculadora de BTC a CLP</title>
+    </head>
+    <body>
+        <!-- Cabecera del sitio -->
+        <nav class="navbar navbar-default navbar-collapse">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">
+                        CALCULADORA BTC A CLP
+                    </a>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><span class="label label-success">1 BTC = <span id="static-clp-value">Cargando...</span> CLP</span></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Cuerpo de la página -->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="box">
+                        <div class="box-header text-center">
+                            CALCULADORA INTERACTIVA BTC | USD | CLP
+                        </div>
+                        <div class="box-content text-center">
+                            <!-- Input de Bitcoin -->
+                            <div class="input-group">
+                                <input type="tel" onkeyup="changeBTC()" class="positive form-control" id="btc-value" value="1" placeholder="Cantidad definida en bitcoins" aria-describedby="btc-value">
+                                <span class="input-group-addon">BTC</span>
+                            </div>
+                            <span class="equal">=</span>
+
+                            <!-- Input de Peso Chileno -->
+                            <div class="input-group">
+                                <input type="tel" onkeyup="changeCLP()" class="positive form-control" id="clp-value" value="Cargando..." placeholder="Cantidad definida en pesos chilenos" aria-describedby="clp-value">
+                                <span class="input-group-addon">CLP</span>
+                            </div>
+                            <span class="equal">=</span>
+
+                            <!-- Input de Dólar Americano -->
+                            <div class="input-group">
+                                <input type="tel" onkeyup="changeUSD()" class="positive form-control" id="usd-value" value="Cargando..." placeholder="Cantidad definida en pesos dólares americanos" aria-describedby="usd-value">
+                                <span class="input-group-addon">USD</span>
+                            </div>
+                            <span class="equal">=</span>
+
+                            <!-- Input de Bolívar -->
+                            <div class="input-group">
+                                <input type="tel" onkeyup="changeBSF()" class="positive form-control" id="vef-value"  value="Cargando..." placeholder="Cantidad definida en bolívares" aria-describedby="vef-value">
+                                <span class="input-group-addon">BSF</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Precios iniciales de conversión -->
+        <input type="hidden" id="usd_to_bsf" value="0" />
+        <input type="hidden" id="btc_to_usd" value="0" />
+        <input type="hidden" id="btc_to_clp" value="0" />
+
+        <!-- Scripts, Librerías -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.numeric.min.js"></script>
+        <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/js/calculator.js"></script>
+
+        <!-- Inputs sólamente numéricos positivos -->
+        <script>
+            $(".positive").numeric({ negative: false, altDecimal: "," }, function() { this.value = ""; this.focus(); });
+        </script>
+    </body>
+</html>

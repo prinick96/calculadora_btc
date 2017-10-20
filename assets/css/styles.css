@@ -1,0 +1,92 @@
+/*
+# Desarrollado por ocrend software
+# @web www.ocrend.com
+# Hoja de estilos general
+*/
+body {
+    background: #0f1414;
+    color: #6f9397;
+}
+.navbar-default {
+    border-radius: unset;
+    border-color: #031113;
+    background: rgba(38,50,51,1);
+    background: -moz-linear-gradient(top, rgba(38,50,51,1) 0%, rgba(21,28,28,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(38,50,51,1)), color-stop(100%, rgba(21,28,28,1)));
+    background: -webkit-linear-gradient(top, rgba(38,50,51,1) 0%, rgba(21,28,28,1) 100%);
+    background: -o-linear-gradient(top, rgba(38,50,51,1) 0%, rgba(21,28,28,1) 100%);
+    background: -ms-linear-gradient(top, rgba(38,50,51,1) 0%, rgba(21,28,28,1) 100%);
+    background: linear-gradient(to bottom, rgba(38,50,51,1) 0%, rgba(21,28,28,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#263233', endColorstr='#151c1c', GradientType=0 );
+}
+
+a, .navbar-default .navbar-brand {
+    color: #59989c;
+    text-shadow: 1px 2px #0e191a;
+}
+a:hover, .navbar-default .navbar-brand:hover {
+    color: #67b0b5;
+}
+.nav>li>span {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    margin-top: 8px;
+    font-size: 13px;
+    font-weight: 100;
+}
+.label-success {
+    background-color: #437278;
+    color: #afdce2;
+}
+.box {
+    background: rgba(9,12,13,1);
+    background: -moz-linear-gradient(top, rgba(9,12,13,1) 0%, rgba(15,20,20,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(9,12,13,1)), color-stop(100%, rgba(15,20,20,1)));
+    background: -webkit-linear-gradient(top, rgba(9,12,13,1) 0%, rgba(15,20,20,1) 100%);
+    background: -o-linear-gradient(top, rgba(9,12,13,1) 0%, rgba(15,20,20,1) 100%);
+    background: -ms-linear-gradient(top, rgba(9,12,13,1) 0%, rgba(15,20,20,1) 100%);
+    background: linear-gradient(to bottom, rgba(9,12,13,1) 0%, rgba(15,20,20,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#090c0d', endColorstr='#0f1414', GradientType=0 );
+    border: 1px solid #1f3232; 
+}
+.box-header {
+    background: #192223;
+    padding: 20px;
+}
+.box-content {
+    padding: 20px;
+}
+.equal {
+    font-size: 35px;
+}
+.form-control {
+    background: #192223;
+    color: #6f9397;
+    border: 1px solid #4f5e5f;
+    box-shadow: inset 0px 0px 10px rgba(0,0,0,0.9);
+    text-align: right;
+    height: 45px;
+    font-size: 30px;
+}
+.form-control:hover {
+    background: #151e1f; 
+}
+.input-group-addon {
+    border: 1px solid #4f5e5f;
+    background-color: #4f5e5f;
+    color: #0f1414;
+    font-weight: 700;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #6f9397 !important;
+}
+::-moz-placeholder { /* Firefox 19+ */
+    color: #6f9397 !important;
+}
+:-ms-input-placeholder { /* IE 10+ */
+    color: #6f9397 !important;
+}
+:-moz-placeholder { /* Firefox 18- */
+    color: #6f9397 !important;
+}
