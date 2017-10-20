@@ -54,7 +54,7 @@ function changeCLP() {
     var exchange = getChanges();
     var clp = $('#clp-value').val();
 
-    $('#btc-value').val(clp / exchange.btc_to_clp);
+    $('#btc-value').val((clp / exchange.btc_to_clp).toFixed(8));
     changeBTC(1);
 }
 
@@ -65,7 +65,7 @@ function changeUSD() {
     var exchange = getChanges();
     var usd = $('#usd-value').val();
 
-    $('#btc-value').val(usd / exchange.btc_to_usd);
+    $('#btc-value').val((usd / exchange.btc_to_usd)).toFixed(8);
     changeBTC(2);
 }
 
@@ -76,7 +76,7 @@ function changeBSF() {
     var exchange = getChanges();
     var bsf = $('#vef-value').val();
 
-    $('#btc-value').val(bsf / exchange.usd_to_bsf);
+    $('#btc-value').val((bsf / exchange.usd_to_bsf).toFixed(8));
     changeBTC(3);
 }
 
