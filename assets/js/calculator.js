@@ -29,13 +29,22 @@ function getChanges() {
 /**
  * Hace el cambio de todas las monedas basandose en el bitcoin
  */
-function changeBTC() {
+function changeBTC(not) {
     var exchange = getChanges();
     var btc = $('#btc-value').val();
 
-    $('#usd-value').val(btc * exchange.btc_to_usd);
-    $('#clp-value').val(btc * exchange.btc_to_clp);
-    $('#vef-value').val(btc * exchange.usd_to_bsf);
+    if(not != 2) {
+        $('#usd-value').val(btc * exchange.btc_to_usd);
+    }
+    
+    if(not != 1) {
+        $('#clp-value').val(btc * exchange.btc_to_clp);
+    }
+    
+    if(not != 3) {
+        $('#vef-value').val(btc * exchange.usd_to_bsf);
+    }
+    
 }
 
 /**
@@ -46,7 +55,7 @@ function changeCLP() {
     var clp = $('#clp-value').val();
 
     $('#btc-value').val(clp / exchange.btc_to_clp);
-    changeBTC();
+    changeBTC(1);
 }
 
 /**
@@ -57,7 +66,7 @@ function changeUSD() {
     var usd = $('#usd-value').val();
 
     $('#btc-value').val(usd / exchange.btc_to_usd);
-    changeBTC();
+    changeBTC(2);
 }
 
 /**
@@ -68,7 +77,7 @@ function changeBSF() {
     var bsf = $('#vef-value').val();
 
     $('#btc-value').val(bsf / exchange.usd_to_bsf);
-    changeBTC();
+    changeBTC(3);
 }
 
 /**
