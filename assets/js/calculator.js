@@ -65,7 +65,7 @@ function changeUSD() {
     var exchange = getChanges();
     var usd = $('#usd-value').val();
 
-    $('#btc-value').val((usd / exchange.btc_to_usd)).toFixed(8);
+    $('#btc-value').val((usd / exchange.btc_to_usd).toFixed(8));
     changeBTC(2);
 }
 
